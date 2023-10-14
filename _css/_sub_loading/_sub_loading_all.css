@@ -1,0 +1,77 @@
+
+.sub_loadingBox { width:100%; height:100%; background-color:#fff;  box-sizing:border-box; overflow:hidden; color: #fff; border-left: 0px solid #fff; }
+	.sub_loading.menu { width:100%; height:44px; overflow:hidden; border-top:0px solid #2b2b2b; line-height:40px; text-indent:5px; font-weight:bold; background-color:#000; 
+						background:linear-gradient( to bottom, #262626, #272727, #212121, #161616, #0d0d0d; #090909; #020202; );
+						background-image:url("../../_img/skin/con_bg1.gif"); }
+	.sub_loading.contents { width:100%; height:100%; box-sizing:border-box; overflow:hidden; border-top:0px solid #2b2b2b; line-height:40px; text-indent:5px; font-weight:bold; background-color:#181818; padding-top:2px; }
+	.sub_loading.contentArticles {width:100%; height:100%; overflow:hidden; margin:0px auto; overflow:hidden; text-align:center; margin-left:6px;   } 
+	.sub_loading.contentArticles li {width:302px; height:302px; box-sizing:border-box; overflow:hidden;  float:left; margin:5px; position:relative; border:3px solid #fff; border-radius:10px; } 
+	.sub_loading.contentArticles li img {width:100%; height:100%; float:left; } 
+	.sub_loading.contentArticles li img:hover {width:100%; height:100%; float:left;  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2); animation-name: img_hover; animation-duration: 0.7s; } 
+	.sub_loading.contentArticles li p {display:block; width:296px; height:9%; box-sizing:border-box; float:left; position:absolute; bottom:0px; left:0px; background-color:#000; opacity:0.6; color:#fff; font-size:12px; line-height:20px; }
+	.sub_loading.contentArticles li span { width:296px; height:11%; display:inline-block; box-sizing:border-box; float:left; position:absolute; bottom:0px; font-family: 'Sunflower', sans-serif; 
+	font-weight:bold; left:0px; background-color:transparent; color:#fff; font-size:15px; line-height:29px; padding:5px; display:block; }
+	.sub_loading.contentArticles li span:hover {display:block;  width:296px; height:100%; animation-name: example; animation-duration: 0.5s; 
+	box-sizing:border-box; float:left; position:absolute; bottom:0px; left:0px; 
+	background-color:#000; opacity:1; color:#fff; font-size:15px; line-height:23px; padding:5px;}
+	@keyframes example {
+  from {height: 50%;}
+  to {height: 100%;}
+}
+
+	@keyframes img_hover {
+  from {transform: scale(1);}
+  to {transform: scale(1.2);}
+}
+
+
+
+
+/*« ≈Õ∏µ*/
+	.filterDiv_02, .filterDiv_b {
+	 /* float: left;*/
+	  background-color: #000;
+	  color: #ffffff;
+	  width: 100px;
+	  line-height: 100px;
+	  text-align: center;
+	  margin: 2px;
+	  display: none;
+	}
+
+	.show {
+	  display: block;
+	}
+
+	.container {
+	  margin-top: 0px;
+	  overflow: hidden;
+	}
+
+	/* Style the buttons */
+	.btn02, .btn2 {
+	  border: none;
+	  outline: none;
+	  padding: 7px 12px;
+	  background-color: #f1f1f1;
+	  cursor: pointer;
+	  margin-top:7px; 
+	}
+
+	.btn02, .btn2:hover {
+	  background-color: #ddd;
+	}
+
+	.btn02.active_02, .btn2.active_2 {
+	  background-color: #666;
+	  color: white;
+	}
+
+	.btn.active, .btn1.active_1, .btn2.active_2, .btn3.active_3, .btn4.active_4 , .btn5.active_5{
+	  background-color: #666; transition: 0.5s;
+	  color: white;
+	}

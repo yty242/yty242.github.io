@@ -1,0 +1,42 @@
+	.filterDiv_02, .filterDiv_b {
+	  float: left;
+	  background-color: #2196F3;
+	  color: #ffffff;
+	  width: 100px;
+	  line-height: 100px;
+	  text-align: center;
+	  margin: 2px;
+	  display: none;
+	}
+
+	.show {
+	  display: block;
+	}
+
+	.container {
+	  margin-top: 0px;
+	  overflow: hidden;
+	}
+
+	/* Style the buttons */
+	.btn02, .btn2 {
+	  border: none;
+	  outline: none;
+	  padding: 7px 12px;
+	  background-color: #f1f1f1;
+	  cursor: pointer;
+	  margin-top:7px; 
+	}
+
+	.btn02, .btn2:hover {
+	  background-color: #ddd;
+	}
+
+	.btn02.active_02, .btn2.active_2 {
+	  background-color: #666;
+	  color: white;
+	}
+
+	.btn.active, .btn1.active_1, .btn2.active_2, .btn3.active_3, .btn4.active_4 , .btn5.active_5{
+	  background-color: #666;
+	  color: white;

@@ -1,0 +1,71 @@
+<!-- 
+	파일명 : _css/_sub_pages/_sub_pages_all.css
+	연관파일 : 
+	설명 : 
+ -->
+
+
+.subpage.no1 {width:100%; height:100%; margin-left:10px; background-color:red;} 
+
+
+		 .colAll {width:calc(100% - 0px); height:5200px;  background-color:#333333; color:#aaa; border-right:0px solid #4f4f4f; position:relative; border-radius:4px; }
+		.col1{width:40px; height:100%; position: absolute; top:0px; left: 0px; } 
+		.col2{width:calc(100% - 13px); height:100%;  background-color:#333333;  position: absolute; top:0px; left: 7px; overflow:hidden; }
+		.col3{width:6px; position: right; background-color : #272727; text-align:right;   }
+
+		 .col1 {width:40px; height:100%;  background-color:#272727; color:#aaa; border-right:0px solid #4f4f4f;}
+		  .col3 {width:100%; height:100%; background-color:#7b7b7b; }
+		  .contentBoxcol1code {width:100%; height:50px; line-height:50px;  margin:0; padding:0; color:#f0f0f0;  clear:both;}
+		  .contentBoxcol1code {background-color : #272727; text-align:right; padding-right:6px;  clear:both;  font-family:gulim; }
+		  
+		 .contentBoxcol2code {width:100%; height:50px; line-height:50px;  margin:0;padding:0; color:#f0f0f0; font-family:gulim; padding-left:10px; font-size:12px; border-left:1px solid #4f4f4f;  }
+		  .contentBoxcol2code:nth-child(even){background-color : #303030; }
+		  .contentBoxcol2code:nth-child(odd){background-color :  #272727; }
+		.contentBoxcol2code:hover {width:100%; height:50px; line-height:50px;  margin:0;padding:0; background-color: yellow; color:#000; font-family:gulim; padding-left:10px; opacity: 1; font-size:12px;  }
+		.contentBoxcol2code:hover span.f_ffff00 {color:red;}
+
+		.contentBoxcol2code.clicksub {height:auto; background-color:#63ffbe; }
+		.contentBoxcol2code.clicksub span {color:#000;}
+
+		.contentBoxcol2code_elaborate {width:100%; height:60px; display:none; line-height:50px;  
+		margin:0;padding:0; background-color : gray; color:#f0f0f0; font-family:gulim; padding-left:10px; font-size:14px;   }
+
+
+
+
+		.elaborateButton {display:inline-block; width:200px; height:50px;  line-height:50px;  color:#0099ff; font-family:Batang;}
+		.contentBoxcol2code_elaborate {width:100%; height:auto; display:none; line-height:50px;  margin:5px; padding-right:20px; padding:5px; padding-bottom:2px; background-color : gray; color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; padding-left:10px; font-size:12px;   }
+		.contentBoxcol2code_elaborate span {width:99%; height:auto; padding-right:10px; font-size:14px; font-weight:normal; line-height:20px; padding-top:10px; }
+		.contentBoxcol2code_elaborate_space {width:100%; height:160px; display:none; line-height:50px;  margin:0;padding:0; background-color : gray; color:#f0f0f0;font-family:gulim; padding-left:10px; font-size:12px;   }
+		.contentBoxcol2code.title > span { text-indent:3px; font-size:20px; font-family:gulim; font-weight:bold; padding:6px; background-color:#eee; border-radius:8px; color:#000; }
+
+		.col2title	{ border-bottom:1px solid #5d5a5a; text-indent:3px; font-size:20px; font-family:serif; font-weight:bold; padding:6px; background-color:#eee; border-radius:8px; color:#000; padding:5px ; margin:10px; 
+					display:inline-block; }
+		.col2title span	{ text-indent:3px; font-size:20px; font-family:serif; font-weight:bold; padding:6px; background-color:#eee; border-radius:8px; color:#000; padding:5px ; margin:3px; 
+					display:inline-block; }
+
+		.contentBoxcol2code > span { text-indent:30px; font-size:15px; font-family:gulim; font-weight:Medium; }
+		.contentBoxcol2code > a {width:100%; height:60px; display:none; line-height:50px;  margin:0;padding:0; 
+								background-color : gray; color:#f0f0f0;font-family:gulim; 
+								padding-left:10px; font-size:11px;   }
+		.contentBoxcol2code:hover span {color:#000; background-color:transparent; }
+		.contentBoxcol2code:hover span.elaborateButton { color:#0099ff; opacity: 1; font-weight:bold; font-size:16px;}
+		.contentBoxcol2code:hover span.elaborateButton:hover { font-weight:bold;}
+		#mCSB_3_container { margin-right:10px; }
+		.contentBoxcol2code.blank {border-left:0px solid #4f4f4f;}
+		.contentBoxcol2code.title > span.elaborateButton {font-weight:bold;}
+		.contentBoxcol2code.half {height:29px; }
+	.contentBoxcol2code:hover span.noC {background-color:yellow; color:#000; width:20px; height:20px; display:inline-block; border-radius:50%; text-indent:5px; line-height:20px; border:1px solid #000;}
+
+		.box2-1 { margin:0; padding:0; }
+
+
+
+		.html_basic_1_menu {width:100%; height:100%; line-height:44px; }
+		.html_basic_1_menu a {width:205px; height:33px;  display:inline-block;  border: none; outline: none; padding: 7px 12px; background-color: #f1f1f1; cursor: pointer; color:#000 }
+		.html_basic_1_menu button  {width:90px; height:33px; font-family:serif; border: none; outline: none; padding: 7px 12px; background-color: #f1f1f1; cursor: pointer;  }
+		.html_basic_1_menu input {width:190px; height:25px; line-height:36px; }
+
+
+	 
+	.col2title > span {border-left:5px solid blue; border-radius:0px; }

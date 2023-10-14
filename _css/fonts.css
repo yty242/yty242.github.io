@@ -1,0 +1,62 @@
+/*   css/font.css    */
+@font-face{
+	font-family:"KROE0555";
+	src:url('/_font/Kroeger/NanumGothic.eot');
+	src:url('/_font/Kroeger/NanumGothic.eot?#iefix') format('embedded-opentype'),
+	url('/fonts/NanumGothic.woff') format('woff'),
+	url('/_font/Kroeger/KROE0555.TTF') format('truetype');
+	url('/fonts/NanumGothic.svg#NanumGothic') format('svg')
+	src:local(※), url('/fonts/NanumGothic.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:900&display=swap');
+
+
+
+@font-face { font-family: serif; Gulim, tahoma ; }
+body {font-family:serif; }
+
+span {color:#fff;}
+
+
+/*   특정  */
+	span {display:inline-block; line-height:150%;}
+	span.module7Span {line-height:28px; }
+	span.module7Span2{line-height:30px; }
+	span.module7Span3{text-align:right; }
+
+/*   사이즈  */
+	span.f_9 {font-size: 9px; -webkit-transform:scale(0.83);}
+	span.b13 {font-size: 13px;}
+	span.f_10 {font-size: 10px;}
+	span.f_11 {font-size: 11px;}
+	span.f_12 {font-size: 12px;}
+	span.f_13 {font-size: 13px;}
+
+/*   색상  */
+	span.f_ff3333 {color:#ff3333;}
+	span.f_0000ff {color:#0000ff; text-indent:0px;}
+	span.f_ffff00 {color:#ffff00; text-indent:0px; } /*   노랑  */
+	span.f_ff0000 {color:#ff0000; text-indent:0px;}
+	span.f_000 {color:#000;}
+	span.f_fff {color:#fff;}
+	 
+
+	span.f_bold {font-weight:bold;}
+
+/*   들여쓰기  */
+	span.sub1 {text-indent:2px;}
+	span.sub2 {text-indent:20px;}
+	span.sub3 {text-indent:10px;}
+
+	span.f_gulim {font-family : gulim; }
+	span.f_tahoma {font-family : tahoma; }
+	span.f_unset {font-family : unset; }
+	
+
+	span.f_bg_f5f3f3 {background-color:#f5f3f3; color:#000; }
+	span.f_bg_ff0000 {background-color:#ffca08bf; color:#fff; }
+
+	a > span:hover {opacity:0.8;}
+
+	span.noC {background-color:#eee; color:#000; width:20px; height:20px; display:inline-block; border-radius:50%; text-indent:5px; line-height:20px; }
