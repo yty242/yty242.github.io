@@ -1,0 +1,82 @@
+/* --- 1. #searchResultCount 스타일 단순화 (필수) --- */
+/* 이전 단계에서 검색바 때문에 추가했던 Flex 스타일을 제거하고 본래의 결과 카운트 스타일로 되돌립니다. */
+#searchResultCount {
+    /* 기존 스타일 유지 (높이, 배경색, 테두리 등) */
+    display: block; /* Flexbox 제거 */
+    justify-content: unset;
+    align-items: unset;
+    padding: 0;
+    text-align: left; 
+    height: 35px; /* 높이 복구 */
+    line-height: 33px; /* 텍스트 중앙 정렬 복구 */
+}
+
+/* --- 2. 🚀 새로운 #searchFilterBox 스타일 추가 --- */
+
+#searchFilterBox {
+    /* 기본 레이아웃 및 디자인 */
+    display: flex; /* 내부 요소를 가로로 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: #1a1a1a;
+    border: 5px solid #2b2b2b;
+    border-top: none; 
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    gap: 10px; /* 요소들 사이 간격 */
+    height: 60px; /* 박스 높이 */
+    box-sizing: border-box;
+    /* transition: 0.4s ease-in-out; (원하시면 추가) */
+}
+
+#searchFilterBox input[type="text"] {
+    /* 검색 입력 필드 스타일 */
+    flex-grow: 1; /* 입력 필드가 가능한 많은 공간을 차지하도록 함 */
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    max-width: 400px; /* PC 환경에서 최대 너비 제한 */
+}
+
+#searchFilterBox button {
+    /* 검색 버튼 스타일 */
+    padding: 10px 20px;
+    background-color: #d32f2f; /* 눈에 띄는 색상 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#searchFilterBox button:hover {
+    background-color: #b71c1c;
+}
+
+/* --- 3. 모바일 미디어 쿼리 (#searchFilterBox) 추가 --- */
+
+@media all and (max-width:530px) {
+    
+    /* #searchFilterBox 모바일 스타일 */
+    #searchFilterBox {
+        flex-direction: column; /* 모바일에서 수직으로 쌓기 */
+        height: auto;
+        padding: 10px;
+    }
+    
+    #searchFilterBox input[type="text"] {
+        width: 100%; /* 전체 너비 사용 */
+        max-width: 100%;
+        margin-bottom: 5px; /* 버튼과의 간격 */
+    }
+
+    #searchFilterBox button {
+        width: 100%; /* 전체 너비 사용 */
+        padding: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+/* pagination.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  border-top: 1px solid #515050;
+  background: linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);
+  padding: 10px;
+}
+
+.page-btn {
+  margin: 0 3px;
+  padding: 8px 14px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.page-btn:hover {
+  background-color: #666;
+  color: red;
+}
+
+.page-btn.active {
+  background-color: #555;
+  color: white;
+}
+
+.page-nav {
+  margin: 0 5px;
+  padding: 8px 14px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.page-nav:hover {
+  background-color: #666;
+  color: red;
+}

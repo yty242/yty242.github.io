@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연예인 집공개</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="메타디스크립션 - 75자(영문 155자) 이내에서 핵심적인 정보" />
+    <meta name="keywords"  lang="en" content="영어 키워드" />
+    <meta name="keywords"  lang="ko" content="한글 키워드 " />
+    <meta name="author" content=" 저작자 써줌" />
+    <meta name="robots" content="noindex,nofollow"  /> 
+	<meta name="referrer" content="same-origin" />
+    <link rel="shortcut icon" href="/_img/ico/3.ico" type="image/x-icon" />
+    <link rel="icon" href="_img/ico/1.ico" type='images/ico' />
+    <link rel="stylesheet"  type="text/css"  href="_css/reset.css" />
+    <link rel="stylesheet"  type="text/css"  href="searchFilterBox.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Poor+Story&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:900|Permanent+Marker&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet"  type="text/css"  href="layout.css" />
+
+
+  <style>
+body { padding-left:1px; padding-top:1px;  overflow-x:hidden; overflow-y:scroll; background-color:#fff; position:relative;  }
+
+
+#dataContainer {
+  display: flex;
+  flex-wrap: wrap;          /* 줄바꿈 허용 */
+  justify-content: center;  /* 가로 방향 중앙 정렬 */
+  align-items: flex-start;  /* 세로 방향 정렬 (위쪽 기준) */
+  text-align: center;       /* 내부 텍스트 중앙 */
+}
+
+
+#dataContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  /*gap: 8px;*/
+}
+
+.filterDiv {
+   /*
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+*/
+}
+
+
+
+/* 👈 1920px 이상의 화면 너비에 대한 hover 스타일 고정 */
+@media all and (min-width: 1920px) {
+	body { overflow-x:hidden; overflow-y:scroll; /* 스크롤바 제거 */}
+	#dataContainer {width: 100%;}
+		div.filterDiv:hover {
+			width: 262px !important;
+			height: 328px !important;
+			margin: 4px !important;
+			opacity: 0.8;
+			border-top: 2px solid red;
+			border-bottom: 4px solid red;
+			box-sizing: border-box;
+			display: inline-block;
+			padding: 1px;
+			background-color: #bdbdbd;
+			padding-top: 1px;
+			
+			/* transition: 0.5s; */
+		}
+	}
+
+
+
+
+body {
+  margin: 0; /* 기본 8px 마진을 0으로 설정 */
+  padding: 0; /* (선택 사항) 기본 패딩도 0으로 설정하여 일관성을 확보합니다. */
+}
+.page-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.page-btn.prev-btn,
+.page-btn.next-btn {
+  font-weight: bold;
+}
+
+div {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+ .divTitle {  
+ height:50px; 
+  font-family: "Poor Story", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align:left;
+  padding-left:5px;
+  font-weight:bold;
+  color:#000;
+  }
+
+
+    .container {
+      overflow: hidden;
+    }
+
+    .filterDiv {
+      float: left;
+      background-color: #ddd;
+      color: #ffffff;
+      width: 262px;
+      height: 328px;
+      line-height: 20px;
+      text-align: center;
+      margin: 4px;
+      display: inline-block; /* 수정된 부분 */
+	  padding:1px; 
+	  border-radius:5px;
+	  padding-top:3px;
+	  box-sizing:border-box;
+    }
+
+div.filterDiv:hover {width:262px; height:328px;  opacity:0.8; border-top:2px solid red;  border-bottom:4px solid red; box-sizing:border-box;      margin: 4px;
+      display: inline-block; /* 수정된 부분 */
+	  padding:1px; 
+	background-color: #bdbdbd;
+	  padding-top:1px;
+/*transition: 0.5s; */
+}
+
+
+    /* The "show" class is added to the filtered elements */
+    .show {
+      display: block;
+    }
+
+	#myBtnContainer{  background-color: #3d3d3d; 
+	   transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+width:; /* 100% */ height:130px; /* 65px */ overflow:hidden; border-top:0px solid #2b2b2b; line-height:65px; text-indent:5px; font-weight:bold; background-color:#232323; 
+border: 5px solid #2b2b2b; border-bottom: 2px solid #000; 
+						 
+				
+	  color: white; }
+
+
+	  #searchResultCount{ border: 5px solid #2b2b2b; background-color: #3d3d3d;
+   transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+width: /* 100% */height:38px; overflow:hidden; border-top:0px solid #2b2b2b; line-height:33px; height:35px; text-indent:5px; font-weight:bold; background-color:#000; 
+						/* background: linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);*/
+						 font-family:'Exo 2', sans-serif;
+						background-color:#232323; 
+
+	  color: white; border-top: 1px solid #515050; border-bottom:2px solid #000}
+
+#dataContainer { width:/* 100% */ height:100%; box-sizing: border-box; overflow:hidden; border-top:0px solid #2b2b2b; line-height:40px; text-indent:0px;font-weight:bold; background-color:#232323; padding-top:4px;  border:5px solid #2b2b2b;
+border-top: 1px solid #515050; padding-bottom:5px; border-bottom: 2px solid #000;
+text-align: center; /* 이 줄을 추가 */
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+}
+
+
+
+    /* Style the buttons */
+    #myBtnContainer .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+	  font-family:'Exo 2', sans-serif;
+	  font-size:14px;
+	  margin-top:7px;
+    }
+  #myBtnContainer .btn:hover {
+     color:red; background-color:#666; 
+    }
+
+    /* Add a light grey background on mouse-over */
+    #myBtnContainer.btn:hover {
+      background-color: #ddd;
+    }
+
+    /* Add a dark background to the active button */
+    #myBtnContainer .btn.active {
+      background-color: #666;
+      color: white;
+    }
+
+    #dataContainer img {
+      width: 253px; height:253px; 
+    }
+
+    #myBtnContainer.filterDiv {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #myBtnContainer.filterDiv a {
+      display: block;
+      width: 100%; /* 부모 요소의 전체 너비를 사용 */
+      height: 100%; /* 부모 요소의 전체 높이를 사용 */
+    }
+
+    #myBtnContainer.filterDiv {
+      line-height: normal; /* 글꼴 간격 설정 */
+      font-size: 16px; /* 글꼴 크기 설정 */
+      font-family: Arial, sans-serif; /* 글꼴 종류 설정 */
+      max-height: 300px; /* 이미지 최대 높이 설정 */
+	  padding-top: 4px;
+    }
+
+    #myBtnContainer.divTitle {
+      font-size: 17px; /* 제목 글꼴 크기 설정 */
+      font-weight: bold; /* 제목 글꼴 두께 설정 */
+    }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  border : 5px solid #2b2b2b;
+  border-top:1px solid #515050;
+  background: linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);
+  padding: 10px;				
+}
+
+    .page-btn, .page-dots {
+      margin: 0 5px;
+      padding: 10px 15px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+.page-btn:hover {
+  background-color: #666; /* 호버 시 배경색 */
+  color: red; /* 호버 시 글자색 */
+}
+
+    .page-btn.active {
+      background-color: #666;
+      color: white;
+    }
+
+
+
+
+
+/* mobile [280~480] */
+
+@media all and (max-width: 530px) {
+  
+
+  #dataContainer img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (max-width:530px) {
+			html, body {height:auto;}
+			body{background-color:#fff; }
+#dataContainer { width:100%; height:100%; box-sizing: border-box; overflow:hidden; border-top:0px solid #2b2b2b; line-height:40px; text-indent:0px;font-weight:bold; background-color:#232323; padding-top:4px;  border:5px solid #2b2b2b;
+border-top: 1px solid #515050; padding-bottom:5px; border-bottom: 2px solid #000;}
+
+#pagination { width:100%; }
+  .filterDiv {
+    width: 45%;
+    height: 366px;
+	min-height: 315px; /* 현재 최소 높이 */
+    float: left;
+    margin: 0px;
+    box-sizing: border-box;
+    border: 5px solid #181818;
+  }
+  .filterDiv > a > img {
+		width: 150px; /* 호버 시 이미지의 너비 */
+		height: auto; /* 이미지의 높이를 자동으로 조정하여 비율을 유지합니다. */
+	}
+
+.filterDiv:hover {
+  opacity: 0.8 !important;
+ 
+  /*transition: 0.5s !important; */
+}
+	
+	  .filterDiv a:hover img {
+		width: 150px; /* 호버 시 이미지의 너비 */
+		height: auto; /* 이미지의 높이를 자동으로 조정하여 비율을 유지합니다. */
+	}
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+
+div.filterDiv:hover {width:232px; height:366px;  opacity:0.8; border-top:2px solid red;  border-bottom:4px solid red; box-sizing:border-box;      margin: 2px;
+      display: inline-block; /* 수정된 부분 */
+	  padding:1px; 
+	background-color: #bdbdbd;
+	  padding-top:1px;
+/*transition: 0.5s; */
+}
+
+}
+
+
+
+/* mobile [280~480] */
+@media all and (min-width: 531px) and (max-width: 1919px)
+  html, body {
+    height:auto;
+  }
+  
+
+
+/* PC [1401~1919] */
+@media all and (min-width:1501px) and (max-width:1919px) { 
+	body { background-color:#fff; }  
+	.container {
+		width:1360px; height:100%; overflow:hidden; box-sizing:border-box;
+		margin:0 auto; border:10px solid #fff; padding:0; border-bottom:0;
+		transition:0.4s ease-in-out;
+		-webkit-transition:0.4s ease-in-out;
+		-o-transition:0.4s ease-in-out;
+		-ms-transition:0.4s ease-in-out;
+		-moz-transition:0.4s ease-in-out;
+	}
+
+	.pagination {
+		display:flex;
+		justify-content:center;
+		margin-top:0;
+		border:5px solid #2b2b2b;
+		border-top:1px solid #515050;
+		background:linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);
+		padding:10px;
+	}
+}
+
+/* Tablet [531~1400] */
+@media all and (min-width:1201px) and (max-width:1500px) { 
+	body { background-color:#fff; }  
+	.container {
+		width:1090px; height:100%; overflow:hidden; box-sizing:border-box;
+		margin:0 auto; border:10px solid #fff; padding:0; border-bottom:0;
+		transition:0.4s ease-in-out;
+		-webkit-transition:0.4s ease-in-out;
+		-o-transition:0.4s ease-in-out;
+		-ms-transition:0.4s ease-in-out;
+		-moz-transition:0.4s ease-in-out;
+	}
+
+	.pagination {
+		display:flex;
+		justify-content:center;
+		margin-top:0;
+		border:5px solid #2b2b2b;
+		border-top:1px solid #515050;
+		background:linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);
+		padding:10px;
+	}
+}
+
+  
+
+/* Tablet [531~1400] */
+@media all and (min-width:901px) and (max-width:1200px) { 
+	body { background-color:#fff; }  
+	.container {
+		width:820px; height:100%; overflow:hidden; box-sizing:border-box;
+		margin:0 auto; border:10px solid #fff; padding:0; border-bottom:0;
+		transition:0.4s ease-in-out;
+		-webkit-transition:0.4s ease-in-out;
+		-o-transition:0.4s ease-in-out;
+		-ms-transition:0.4s ease-in-out;
+		-moz-transition:0.4s ease-in-out;
+	}
+
+	.pagination {
+		display:flex;
+		justify-content:center;
+		margin-top:0;
+		border:5px solid #2b2b2b;
+		border-top:1px solid #515050;
+		background:linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);
+		padding:10px;
+	}
+}
+
+
+
+/* Tablet [531~1400] */
+@media all and (min-width:531px) and (max-width:900px) { 
+	body { background-color:#fff; }  
+	.container {
+		width:550px; height:100%; overflow:hidden; box-sizing:border-box;
+		margin:0 auto; border:10px solid #fff; padding:0; border-bottom:0;
+		transition:0.4s ease-in-out;
+		-webkit-transition:0.4s ease-in-out;
+		-o-transition:0.4s ease-in-out;
+		-ms-transition:0.4s ease-in-out;
+		-moz-transition:0.4s ease-in-out;
+	}
+
+	.pagination {
+		display:flex;
+		justify-content:center;
+		margin-top:0;
+		border:5px solid #2b2b2b;
+		border-top:1px solid #515050;
+		background:linear-gradient(to bottom, #262626, #272727, #212121, #161616, #0d0d0d, #090909, #020202);
+		padding:10px;
+	}
+}
+
+
+
+/* mobile [280~480] */
+@media all and (max-width:530px) {
+  html, body {
+    height:auto;
+  }
+  
+  body {
+    background-color:#fff;
+  }
+  
+  /* 필터 버튼 영역 */
+  #myBtnContainer {
+   width:100%;
+    height: auto;
+    overflow-y: auto;
+    padding: 5px;
+  }
+  
+  #myBtnContainer .btn {
+    font-size: 12px;
+    padding: 8px 10px;
+    margin: 3px;
+  }
+  
+  /* 데이터 컨테이너 이미지 */
+  #dataContainer img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* 필터 아이템 */
+  .filterDiv {
+    width: 48%;
+    height: auto;
+    min-height: 315px;
+    float: left;
+    margin: 1%;
+    box-sizing: border-box;
+    border: 3px solid #181818;
+    padding: 5px;
+  }
+  
+  .filterDiv > a > img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* 모바일에서는 호버 효과 크기 고정 */
+  .filterDiv:hover,
+  div.filterDiv:hover {
+    width: 48% !important;
+    height: auto !important;
+    opacity: 0.8;
+    border: 3px solid red;
+    box-sizing: border-box;
+    margin: 1%;
+    display: inline-block;
+    padding: 5px;
+    background-color: #bdbdbd;
+  }
+  
+  .filterDiv a:hover img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  /* 페이징 영역 */
+  .pagination {
+    flex-wrap: wrap;
+    padding: 8px 5px;
+    gap: 3px;
+  }
+  
+  .page-btn, .page-dots {
+    margin: 2px;
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+  
+  .page-btn.prev-btn,
+  .page-btn.next-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  
+  /* 검색 결과 카운트 */
+  #searchResultCount {
+	width: 100%;
+    font-size: 12px;
+    height: auto;
+    padding: 8px 5px;
+    line-height: normal;
+  }
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH69L0NSJW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH69L0NSJW');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096369921886539"
+     crossorigin="anonymous"></script>
+<body>
+	<div class="container" id="searchFilterBox">
+		<input type="text" id="textSearchInput" placeholder="연예인 이름, 주소 등으로 검색">
+		<button id="searchButton" onclick="filterSelection(currentFilter, true)">🔍 검색 시작</button>
+	</div>
+
+  <!-- Control buttons // 필터링된 데이터 미리 로드 부분 업로드 할것.--> 
+  <div class="container" id="myBtnContainer">
+    <button class="btn all" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+    <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+    <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+    <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+    <button class="btn" onclick="filterSelection('집공개')"> 대한민국</button> 
+    <button class="btn" onclick="filterSelection('화곡동')"> 화곡동</button>
+    <button class="btn" onclick="filterSelection('마포구')"> 마포구</button> 
+    <button class="btn" onclick="filterSelection('강남구')"> 강남구</button> 
+    <button class="btn" onclick="filterSelection('신공덕동')"> 신공덕동</button> 
+    <button class="btn" onclick="filterSelection('cheongdamdong')"> 청담동</button> 
+    <button class="btn" onclick="filterSelection('dogokdong')"> 도곡동</button> 
+    <button class="btn" onclick="filterSelection('hwagokdong')"> 화곡동</button>
+    <button class="btn" onclick="filterSelection('논현동')"> 논현동</button> 
+    <button class="btn" onclick="filterSelection('삼성동')"> 삼성동</button> 
+    <button class="btn" onclick="filterSelection('서대문구')"> 서대문구</button> 
+    <button class="btn" onclick="filterSelection('연희동')"> 연희동</button> 
+    <button class="btn" onclick="filterSelection('가평군')"> 가평군</button> 
+    <button class="btn" onclick="filterSelection('영등포구')"> 영등포구</button> 
+    <button class="btn" onclick="filterSelection('여의도동')"> 여의도동</button> 
+    <button class="btn" onclick="filterSelection('남구신정동')"> 신정동</button> 
+    <button class="btn" onclick="filterSelection('서울시용산구')"> 용산구</button> 
+    <button class="btn" onclick="filterSelection('용산구이태원동')"> 이태원동</button> 
+    <button class="btn" onclick="filterSelection('경기도양주시')"> 양주시</button> 
+    <button class="btn" onclick="filterSelection('서울시강남구')"> 강남구</button> 
+    <button class="btn" onclick="filterSelection('강남구역삼동')"> 역삼동</button> 
+	
+	
+  </div>
+
+  <!-- 검색 결과의 총 개수를 표시할 요소 -->
+  <div class="container" id="searchResultCount"></div>
+
+
+
+  <div class="container" id="dataContainer">
+    <!-- Data will be dynamically added here -->
+  </div>
+
+  <div class="container pagination" id="pagination">
+    <!-- Pagination buttons will be dynamically added here -->
+  </div>
+
+
+<script>
+/*
+    const itemsPerPage = 14; // 페이지당 표시할 아이템 수
+    let filteredData = {}; // 필터링된 데이터를 저장할 객체
+    let currentPage = 1; // 현재 페이지 번호
+    let currentFilter = 'all'; // 현재 필터
+
+// JSON 파일 로드 함수
+function loadJSON(callback) {
+  const xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', '1.json', true); // JSON 파일의 경로를 수정하세요
+  xobj.onreadystatechange = function () {
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      callback(xobj.responseText);
+    }
+  };
+  xobj.send(null);
+}
+
+// 필터링된 데이터 미리 로드
+const filters = ['all', 'cars', 'animals', 'fruits', 'colors',  'cheongdamdong', 'dogokdong', 'hwagokdong',
+	'마포구', '논현동', '신공덕동', '삼성동',  '서대문구', '연희동', '여의도동','남구신정동','용산구이태원동','강남구역삼동',
+	'가평군', 
+	'경기도양주시',
+	'강남구', '영등포구','서울시용산구','서울시강남구',
+	'집공개'];
+loadJSON(function(response) {
+  const jsonData = JSON.parse(response);
+  filters.forEach(filter => fetchFilteredData(filter, jsonData));
+  showPage(currentPage);
+  renderPagination();
+});
+
+
+function fetchFilteredData(category, data) {
+  // "all" 필터는 모든 데이터를 표시합니다.
+  filteredData[category] = category === 'all' ? data : data.filter(item => {
+    const categories = item.category.split(',').map(c => c.trim());
+    return categories.includes(category);
+  });
+  updateSearchResultCount(); // 검색 결과 개수 업데이트
+}
+
+
+
+    function showPage(pageNumber) {
+      // 페이지 번호에 따라 필터링된 데이터를 표시합니다.
+      const startIndex = (pageNumber - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      const itemsToShow = filteredData[currentFilter].slice(startIndex, endIndex);
+      document.getElementById('dataContainer').innerHTML = '';
+      itemsToShow.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'filterDiv ' + item.category; // 카테고리를 클래스로 추가
+        const a = document.createElement('a');
+        a.href = item.link;
+        const img = document.createElement('img');
+        img.src = item['img url']; // 이미지 URL 속성에 접근
+        const divTitle = document.createElement('div');
+        divTitle.className = 'divTitle';
+        divTitle.textContent = item.title; // 제목 속성에 접근
+        div.setAttribute('data-category', item.category); // 컬럼4를 데이터 속성으로 추가
+        a.appendChild(img);
+        a.appendChild(divTitle);
+        div.appendChild(a);
+        document.getElementById('dataContainer').appendChild(div);
+      });
+      // 페이지 맨 위로 스크롤
+      window.scrollTo(0, 0);
+    }
+
+    function renderPagination() {
+      const totalPages = Math.ceil(filteredData[currentFilter].length / itemsPerPage);
+      const paginationContainer = document.getElementById('pagination');
+      paginationContainer.innerHTML = '';
+      
+      // 이전 페이지 버튼 생성
+      const prevButton = document.createElement('div');
+      prevButton.classList.add('page-btn', 'prev-btn');
+      prevButton.textContent = '◀ 이전';
+      prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          showPage(currentPage);
+          renderPagination();
+        }
+      });
+      if (currentPage === 1) {
+        prevButton.classList.add('disabled');
+      }
+      paginationContainer.appendChild(prevButton);
+      
+      // 페이지 번호 버튼 생성 (최대 5개만 표시)
+      const maxVisiblePages = 5; // 표시할 최대 페이지 번호 개수
+      let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+      
+      if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+      }
+      
+      // 첫 페이지 표시 (범위 밖일 때)
+      if (startPage > 1) {
+        const firstPageButton = document.createElement('div');
+        firstPageButton.classList.add('page-btn');
+        firstPageButton.textContent = '1';
+        firstPageButton.addEventListener('click', () => {
+          currentPage = 1;
+          showPage(currentPage);
+          renderPagination();
+        });
+        paginationContainer.appendChild(firstPageButton);
+        
+        if (startPage > 2) {
+          const dots = document.createElement('div');
+          dots.classList.add('page-dots');
+          dots.textContent = '...';
+          paginationContainer.appendChild(dots);
+        }
+      }
+      
+      for (let i = startPage; i <= endPage; i++) {
+        const pageButton = document.createElement('div');
+        pageButton.classList.add('page-btn');
+        pageButton.textContent = i;
+        if (i === currentPage) {
+          pageButton.classList.add('active');
+        }
+        pageButton.addEventListener('click', () => {
+          currentPage = i;
+          showPage(currentPage);
+          renderPagination();
+        });
+        paginationContainer.appendChild(pageButton);
+      }
+      
+      // 마지막 페이지 표시 (범위 밖일 때)
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          const dots = document.createElement('div');
+          dots.classList.add('page-dots');
+          dots.textContent = '...';
+          paginationContainer.appendChild(dots);
+        }
+        
+        const lastPageButton = document.createElement('div');
+        lastPageButton.classList.add('page-btn');
+        lastPageButton.textContent = totalPages;
+        lastPageButton.addEventListener('click', () => {
+          currentPage = totalPages;
+          showPage(currentPage);
+          renderPagination();
+        });
+        paginationContainer.appendChild(lastPageButton);
+      }
+      
+      // 다음 페이지 버튼 생성
+      const nextButton = document.createElement('div');
+      nextButton.classList.add('page-btn', 'next-btn');
+      nextButton.textContent = '다음 ▶';
+      nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          showPage(currentPage);
+          renderPagination();
+        }
+      });
+      if (currentPage === totalPages) {
+        nextButton.classList.add('disabled');
+      }
+      paginationContainer.appendChild(nextButton);
+    }
+
+function filterSelection(c) {
+  currentPage = 1; // 필터링 시 현재 페이지를 1로 초기화
+  currentFilter = c; // 현재 필터 설정
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(button => {
+    button.classList.remove('active');
+  });
+  event.target.classList.add('active'); // 클릭한 버튼에 'active' 클래스 추가
+  console.log('Current filter:', currentFilter); // 현재 필터 확인
+  showPage(currentPage);
+  renderPagination();
+  updateSearchResultCount(); // 검색 결과 개수 업데이트
+}
+
+
+    function updatePaginationButtons() {
+      renderPagination();
+    }
+
+    // 검색 결과 개수를 업데이트하는 함수
+    function updateSearchResultCount() {
+      const totalCount = filteredData[currentFilter].length;
+      document.getElementById('searchResultCount').textContent = `Search results: ${totalCount}`;
+    }
+
+    // 페이지 로딩 시 첫 번째 페이지 표시
+    window.onload = function() {
+      const allButton = document.querySelector('.btn.all');
+      allButton.click();
+    };
+*/
+  </script> 
+
+	<script src="searchFilterBox.js"></script>
+
+
+</body>
+</html>
