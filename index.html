@@ -152,7 +152,7 @@ div.filterDiv:hover {width:262px; height:328px;  opacity:0.8; border-top:2px sol
     -o-transition: 0.4s ease-in-out;
     -ms-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
-width:; /* 100% */ height:130px; /* 65px */ overflow:hidden; border-top:0px solid #2b2b2b; line-height:65px; text-indent:5px; font-weight:bold; background-color:#232323; 
+width:; /* 100% */ min-height:72px; height:auto; /* 65px */ overflow:hidden; border-top:0px solid #2b2b2b; line-height:30px; text-indent:0px; font-weight:bold; background-color:#232323; 
 border: 5px solid #2b2b2b; border-bottom: 2px solid #000; 
 						 
 				
@@ -188,7 +188,7 @@ text-align: center; /* 이 줄을 추가 */
     #myBtnContainer .btn {
       border: none;
       outline: none;
-      padding: 12px 16px;
+      padding: 4px 14px;
       background-color: #f1f1f1;
       cursor: pointer;
 	  font-family:'Exo 2', sans-serif;
@@ -565,31 +565,82 @@ div.filterDiv:hover {width:232px; height:366px;  opacity:0.8; border-top:2px sol
   <!-- Control buttons // 필터링된 데이터 미리 로드 부분 업로드 할것.--> 
   <div class="container" id="myBtnContainer">
     <button class="btn all" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('트로트가수')"> 트로트가수</button>
+    <button class="btn" onclick="filterSelection('작곡가')"> 작곡가</button>
+    <button class="btn" onclick="filterSelection('희극인')"> 희극인</button>
+    <button class="btn" onclick="filterSelection('모델')"> 모델</button>
+    <button class="btn" onclick="filterSelection('배우')"> 배우</button>
+    <button class="btn" onclick="filterSelection('의사')"> 의사</button>
+    <button class="btn" onclick="filterSelection('아이돌')"> 아이돌</button>
+    <button class="btn" onclick="filterSelection('뮤지컬배우')"> 뮤지컬배우</button>
+    <button class="btn" onclick="filterSelection('유튜버')"> 유튜버</button>
+    <button class="btn" onclick="filterSelection('요리사')"> 요리사</button>
+    <button class="btn" onclick="filterSelection('래퍼')"> 래퍼</button>
+    <button class="btn" onclick="filterSelection('댄서')"> 댄서</button>
+    <button class="btn" onclick="filterSelection('웹툰작가')"> 웹툰작가</button>
+    <button class="btn" onclick="filterSelection('아나운서')"> 아나운서</button>
+    <button class="btn" onclick="filterSelection('성우')"> 성우</button>
+    <button class="btn" onclick="filterSelection('운동선수')"> 운동선수</button>
+    <button class="btn" onclick="filterSelection('방송인')"> 방송인</button>
     <button class="btn" onclick="filterSelection('cars')"> Cars</button>
     <button class="btn" onclick="filterSelection('animals')"> Animals</button>
     <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
     <button class="btn" onclick="filterSelection('colors')"> Colors</button>
     <button class="btn" onclick="filterSelection('집공개')"> 대한민국</button> 
-    <button class="btn" onclick="filterSelection('화곡동')"> 화곡동</button>
-    <button class="btn" onclick="filterSelection('마포구')"> 마포구</button> 
-    <button class="btn" onclick="filterSelection('강남구')"> 강남구</button> 
+    <button class="btn" onclick="filterSelection('서울시마포구')"> 마포구</button> 
+    <button class="btn" onclick="filterSelection('서울시강남구')"> 강남구</button> 
+    <button class="btn" onclick="filterSelection('서대문구연희동')"> 연희동</button> 
     <button class="btn" onclick="filterSelection('신공덕동')"> 신공덕동</button> 
-    <button class="btn" onclick="filterSelection('cheongdamdong')"> 청담동</button> 
-    <button class="btn" onclick="filterSelection('dogokdong')"> 도곡동</button> 
-    <button class="btn" onclick="filterSelection('hwagokdong')"> 화곡동</button>
-    <button class="btn" onclick="filterSelection('논현동')"> 논현동</button> 
-    <button class="btn" onclick="filterSelection('삼성동')"> 삼성동</button> 
-    <button class="btn" onclick="filterSelection('서대문구')"> 서대문구</button> 
-    <button class="btn" onclick="filterSelection('연희동')"> 연희동</button> 
+    <button class="btn" onclick="filterSelection('강남구청담동')"> 청담동</button> 
+    <button class="btn" onclick="filterSelection('강남구도곡동')"> 도곡동</button>
+    <button class="btn" onclick="filterSelection('강서구화곡동')"> 화곡동</button>
+    <button class="btn" onclick="filterSelection('용산구한강로동')"> 한강로동</button>
+    <button class="btn" onclick="filterSelection('강남구논현동')"> 논현동</button> 
+    <button class="btn" onclick="filterSelection('강남구삼성동')"> 삼성동</button> 
+    <button class="btn" onclick="filterSelection('서울시서대문구')"> 서대문구</button> 
+    <button class="btn" onclick="filterSelection('서대문구연희동')"> 연희동</button> 
     <button class="btn" onclick="filterSelection('가평군')"> 가평군</button> 
     <button class="btn" onclick="filterSelection('영등포구')"> 영등포구</button> 
-    <button class="btn" onclick="filterSelection('여의도동')"> 여의도동</button> 
+    <button class="btn" onclick="filterSelection('영등포구여의도동')"> 여의도동</button> 
     <button class="btn" onclick="filterSelection('남구신정동')"> 신정동</button> 
     <button class="btn" onclick="filterSelection('서울시용산구')"> 용산구</button> 
     <button class="btn" onclick="filterSelection('용산구이태원동')"> 이태원동</button> 
+    <button class="btn" onclick="filterSelection('용산구한남동')"> 한남동</button> 
     <button class="btn" onclick="filterSelection('경기도양주시')"> 양주시</button> 
     <button class="btn" onclick="filterSelection('서울시강남구')"> 강남구</button> 
-    <button class="btn" onclick="filterSelection('강남구역삼동')"> 역삼동</button> 
+    <button class="btn" onclick="filterSelection('강남구역삼동')"> 역삼동</button>  
+    <button class="btn" onclick="filterSelection('종로구구기동')"> 구기동</button>  
+    <button class="btn" onclick="filterSelection('성동구금호동')"> 금호동</button> 
+    <button class="btn" onclick="filterSelection('단독주택')"> 단독주택</button>
+    <button class="btn" onclick="filterSelection('주상복합아파트')"> 주상복합아파트</button>
+    <button class="btn" onclick="filterSelection('연립주택')"> 연립주택</button>
+    <button class="btn" onclick="filterSelection('다세대주택')"> 다세대주택</button>
+    <button class="btn" onclick="filterSelection('근생시설')"> 근생시설</button>
+    <button class="btn" onclick="filterSelection('숙박시설')"> 숙박시설</button>
+    <button class="btn" onclick="filterSelection('오피스텔')"> 오피스텔</button>
+    <button class="btn" onclick="filterSelection('아파트')"> 아파트</button>
+    <button class="btn" onclick="filterSelection('타운하우스')"> 타운하우스</button>
+    <button class="btn" onclick="filterSelection('아트컬렉션')"> 아트컬렉션</button>
+    <button class="btn" onclick="filterSelection('전지적참견시점')"> 전지적참견시점</button>
+    <button class="btn" onclick="filterSelection('4인용식탁')"> 4인용식탁</button>
+    <button class="btn" onclick="filterSelection('미운우리새끼')"> 미운우리새끼</button>
+    <button class="btn" onclick="filterSelection('동상이몽2')"> 동상이몽2</button>
+    <button class="btn" onclick="filterSelection('프리한닥터M')"> 프리한닥터M</button>
+    <button class="btn" onclick="filterSelection('짠남자')"> 짠남자</button>
+    <button class="btn" onclick="filterSelection('나혼자산다')"> 나혼자산다</button>
+    <button class="btn" onclick="filterSelection('편스토랑')"> 편스토랑</button>
+    <button class="btn" onclick="filterSelection('한강뷰')"> 한강뷰</button>
+    <button class="btn" onclick="filterSelection('복층')"> 복층</button>
+    <button class="btn" onclick="filterSelection('테라스')"> 테라스</button>
+    <button class="btn" onclick="filterSelection('유엔빌리지')"> 유엔빌리지</button>
+    <button class="btn" onclick="filterSelection('신도시')"> 신도시</button>
+    <button class="btn" onclick="filterSelection('주거용부동산')"> 주거용부동산</button>
+    <button class="btn" onclick="filterSelection('업무용부동산')"> 업무용부동산</button>
+    <button class="btn" onclick="filterSelection('신혼집')"> 신혼집</button>
+    <button class="btn" onclick="filterSelection('전원주택')"> 전원주택</button>
+    <button class="btn" onclick="filterSelection('자가')"> 자가</button>
+    <button class="btn" onclick="filterSelection('신축')"> 신축</button>
+    <button class="btn" onclick="filterSelection('부동산거래정보')"> 부동산거래정보</button>
 	
 	
   </div>
@@ -815,7 +866,11 @@ function filterSelection(c) {
 */
   </script> 
 
-	<script src="searchFilterBox.js"></script>
+	<script src="searchFilterBox2.js"></script>
+
+
+
+
 
 
 </body>
